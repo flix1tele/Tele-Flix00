@@ -3,1566 +3,370 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FLIX WEB - Ultimate Referral Engine v8.0">
-    <meta name="theme-color" content="#8b0000">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>FLIX WEB v8.0 | Ultimate Referral Engine</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <title>FLIX WEB v10 - محرك الإحالات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <style>
-        /* ============================================================
-           FLIX WEB v8.0 - ULTIMATE DESIGN SYSTEM
-           Pure Digital - No Emoji - White Glass - Maximum Performance
-           ============================================================ */
-        
         :root {
-            /* Color System */
-            --color-bg: #f8f9fb;
-            --color-bg-alt: #f0f1f5;
-            --color-surface: #ffffff;
-            --color-surface-alt: #fafbfc;
-            --color-surface-hover: #f5f6f8;
-            --color-border: #e2e5ea;
-            --color-border-light: #eef0f3;
-            --color-border-focus: #c0c4cc;
-            
-            --color-primary: #8b0000;
-            --color-primary-light: #a00000;
-            --color-primary-dark: #660000;
-            --color-primary-glow: rgba(139, 0, 0, 0.12);
-            
-            --color-accent: #cc0000;
-            --color-accent-light: #e60000;
-            --color-accent-dark: #990000;
-            
-            --color-text: #1a1a2e;
-            --color-text-secondary: #4a4a5e;
-            --color-text-tertiary: #7a7a8e;
-            --color-text-muted: #a0a0b0;
-            --color-text-inverse: #ffffff;
-            
-            --color-success: #008a00;
-            --color-success-bg: #e6f9e6;
-            --color-error: #cc0000;
-            --color-error-bg: #ffe6e6;
-            --color-warning: #b86e00;
-            --color-warning-bg: #fff8e6;
-            --color-info: #0055cc;
-            --color-info-bg: #e6f0ff;
-            
-            --color-gold: #996600;
-            --color-gold-light: #cc8800;
-            
-            /* Typography */
-            --font-primary: 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            --font-mono: 'SF Mono', 'Cascadia Code', 'Consolas', 'Courier New', monospace;
-            
-            --font-weight-light: 300;
-            --font-weight-regular: 400;
-            --font-weight-medium: 500;
-            --font-weight-semibold: 600;
-            --font-weight-bold: 700;
-            --font-weight-extrabold: 800;
-            --font-weight-black: 900;
-            
-            --font-size-xs: 0.65rem;
-            --font-size-sm: 0.75rem;
-            --font-size-base: 0.875rem;
-            --font-size-md: 0.95rem;
-            --font-size-lg: 1.1rem;
-            --font-size-xl: 1.3rem;
-            --font-size-2xl: 1.6rem;
-            --font-size-3xl: 2rem;
-            --font-size-4xl: 2.5rem;
-            --font-size-5xl: 3.5rem;
-            
-            --letter-spacing-tight: -0.5px;
-            --letter-spacing-normal: 0px;
-            --letter-spacing-wide: 1px;
-            --letter-spacing-wider: 2px;
-            --letter-spacing-widest: 4px;
-            
-            /* Spacing */
-            --space-1: 4px;
-            --space-2: 8px;
-            --space-3: 12px;
-            --space-4: 16px;
-            --space-5: 20px;
-            --space-6: 24px;
-            --space-8: 32px;
-            --space-10: 40px;
-            --space-12: 48px;
-            --space-16: 64px;
-            --space-20: 80px;
-            
-            /* Border Radius */
-            --radius-sm: 6px;
-            --radius-md: 10px;
-            --radius-lg: 16px;
-            --radius-xl: 20px;
-            --radius-2xl: 24px;
-            --radius-full: 9999px;
-            
-            /* Shadows */
-            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
-            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.04);
-            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.04);
-            --shadow-xl: 0 12px 36px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.05);
-            --shadow-2xl: 0 20px 60px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.06);
-            
-            --shadow-primary: 0 4px 16px var(--color-primary-glow);
-            --shadow-accent: 0 4px 16px rgba(204, 0, 0, 0.2);
-            
-            /* Glass Effect */
-            --glass-bg: rgba(255, 255, 255, 0.85);
-            --glass-bg-strong: rgba(255, 255, 255, 0.95);
-            --glass-blur: blur(24px);
-            --glass-border: rgba(0, 0, 0, 0.06);
-            
-            /* Transitions */
-            --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-base: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-spring: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            
-            /* Layout */
-            --max-width: 960px;
-            --header-height: auto;
-            
-            /* Z-index */
-            --z-base: 1;
-            --z-overlay: 10;
-            --z-modal: 100;
-            --z-toast: 1000;
-        }
-        
-        /* ============================================================
-           RESET & BASE
-           ============================================================ */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            font-size: 16px;
-            -webkit-text-size-adjust: 100%;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: var(--font-primary);
-            background: var(--color-bg);
-            color: var(--color-text);
-            min-height: 100vh;
-            font-size: var(--font-size-base);
-            font-weight: var(--font-weight-regular);
-            line-height: 1.6;
-            letter-spacing: var(--letter-spacing-normal);
-            overflow-x: hidden;
-            
-            background-image: 
-                radial-gradient(ellipse at 15% 20%, rgba(139, 0, 0, 0.02) 0%, transparent 55%),
-                radial-gradient(ellipse at 85% 75%, rgba(139, 0, 0, 0.015) 0%, transparent 55%),
-                radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0.01) 0%, transparent 70%);
-            background-attachment: fixed;
-        }
-        
-        /* ============================================================
-           SCROLLBAR
-           ============================================================ */
-        ::-webkit-scrollbar {
-            width: 5px;
-            height: 5px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: var(--color-border);
-            border-radius: var(--radius-full);
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--color-border-focus);
-        }
-        
-        /* ============================================================
-           MAIN LAYOUT
-           ============================================================ */
-        .flix-app {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: var(--space-5);
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-4);
-        }
-        
-        @media (min-width: 768px) {
-            .flix-app {
-                padding: var(--space-8) var(--space-5);
-                gap: var(--space-5);
-            }
-        }
-        
-        /* ============================================================
-           HEADER
-           ============================================================ */
-        .flix-header {
-            background: var(--glass-bg-strong);
-            backdrop-filter: var(--glass-blur);
-            -webkit-backdrop-filter: var(--glass-blur);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--radius-xl);
-            padding: var(--space-10) var(--space-6);
-            text-align: center;
-            box-shadow: var(--shadow-lg);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .flix-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, 
-                transparent 0%, 
-                var(--color-primary) 20%, 
-                var(--color-accent) 50%, 
-                var(--color-primary) 80%, 
-                transparent 100%
-            );
-        }
-        
-        .flix-header .brand-name {
-            font-size: var(--font-size-5xl);
-            font-weight: var(--font-weight-black);
-            color: var(--color-primary);
-            letter-spacing: var(--letter-spacing-widest);
-            line-height: 1;
-            text-transform: uppercase;
-            user-select: none;
-        }
-        
-        .flix-header .brand-subtitle {
-            font-size: var(--font-size-xs);
-            color: var(--color-text-muted);
-            letter-spacing: var(--letter-spacing-widest);
-            margin-top: var(--space-2);
-            font-weight: var(--font-weight-medium);
-        }
-        
-        .flix-header .brand-version {
-            display: inline-block;
-            background: var(--color-primary);
-            color: var(--color-text-inverse);
-            font-size: var(--font-size-xs);
-            font-weight: var(--font-weight-bold);
-            padding: var(--space-1) var(--space-3);
-            border-radius: var(--radius-full);
-            letter-spacing: var(--letter-spacing-wide);
-            margin-top: var(--space-3);
-        }
-        
-        .flix-header .stats-row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: var(--space-8);
-            margin-top: var(--space-6);
-            flex-wrap: wrap;
-        }
-        
-        .flix-header .stat-item {
-            text-align: center;
-            min-width: 60px;
-        }
-        
-        .flix-header .stat-value {
-            font-size: var(--font-size-2xl);
-            font-weight: var(--font-weight-extrabold);
-            color: var(--color-primary-dark);
-            line-height: 1;
-            font-variant-numeric: tabular-nums;
-            font-family: var(--font-mono);
-        }
-        
-        .flix-header .stat-value.gold {
-            color: var(--color-gold);
-        }
-        
-        .flix-header .stat-label {
-            font-size: var(--font-size-xs);
-            color: var(--color-text-muted);
-            letter-spacing: var(--letter-spacing-widest);
-            margin-top: var(--space-1);
-            font-weight: var(--font-weight-semibold);
-        }
-        
-        .flix-header .stat-divider {
-            width: 1px;
-            height: 30px;
-            background: var(--color-border);
-        }
-        
-        /* ============================================================
-           CARDS
-           ============================================================ */
-        .flix-card {
-            background: var(--glass-bg-strong);
-            backdrop-filter: var(--glass-blur);
-            -webkit-backdrop-filter: var(--glass-blur);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--radius-lg);
-            padding: var(--space-6);
-            box-shadow: var(--shadow-md);
-            transition: box-shadow var(--transition-base), transform var(--transition-base);
-        }
-        
-        .flix-card:hover {
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .flix-card-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: var(--space-5);
-            padding-bottom: var(--space-4);
-            border-bottom: 1px solid var(--color-border-light);
-        }
-        
-        .flix-card-title {
-            font-size: var(--font-size-md);
-            font-weight: var(--font-weight-bold);
-            color: var(--color-text);
-            letter-spacing: var(--letter-spacing-wider);
-            text-transform: uppercase;
-        }
-        
-        .flix-card-badge {
-            display: inline-block;
-            padding: var(--space-1) var(--space-3);
-            border-radius: var(--radius-full);
-            font-size: var(--font-size-xs);
-            font-weight: var(--font-weight-bold);
-            letter-spacing: var(--letter-spacing-wide);
-        }
-        
-        .flix-card-badge.active {
-            background: var(--color-success-bg);
-            color: var(--color-success);
-        }
-        
-        .flix-card-badge.idle {
-            background: var(--color-bg-alt);
-            color: var(--color-text-muted);
-        }
-        
-        .flix-card-badge.running {
-            background: var(--color-info-bg);
-            color: var(--color-info);
-        }
-        
-        /* ============================================================
-           FORM ELEMENTS
-           ============================================================ */
-        .form-group {
-            margin-bottom: var(--space-5);
-        }
-        
-        .form-label {
-            display: flex;
-            align-items: center;
-            gap: var(--space-2);
-            font-size: var(--font-size-sm);
-            font-weight: var(--font-weight-bold);
-            color: var(--color-text-secondary);
-            letter-spacing: var(--letter-spacing-wider);
-            margin-bottom: var(--space-2);
-            text-transform: uppercase;
-        }
-        
-        .form-label .label-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 20px;
-            height: 20px;
-            background: var(--color-bg-alt);
-            border-radius: var(--radius-sm);
-            font-size: var(--font-size-xs);
-        }
-        
-        .form-input {
-            width: 100%;
-            padding: var(--space-3) var(--space-4);
-            background: var(--color-surface);
-            border: 1.5px solid var(--color-border);
-            border-radius: var(--radius-md);
-            color: var(--color-text);
-            font-family: var(--font-primary);
-            font-size: var(--font-size-md);
-            font-weight: var(--font-weight-medium);
-            letter-spacing: var(--letter-spacing-normal);
-            transition: all var(--transition-fast);
-            appearance: none;
-            -webkit-appearance: none;
-        }
-        
-        .form-input:focus {
-            outline: none;
-            border-color: var(--color-primary);
-            box-shadow: 0 0 0 3px var(--color-primary-glow);
-            background: var(--color-surface-hover);
-        }
-        
-        .form-input:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            background: var(--color-bg-alt);
-        }
-        
-        .form-input::placeholder {
-            color: var(--color-text-muted);
-            font-weight: var(--font-weight-light);
-        }
-        
-        .form-input.ltr {
-            direction: ltr;
-            text-align: left;
-            font-family: var(--font-mono);
-            font-size: var(--font-size-sm);
-        }
-        
-        .form-hint {
-            font-size: var(--font-size-xs);
-            color: var(--color-text-muted);
-            margin-top: var(--space-1);
-            letter-spacing: var(--letter-spacing-wide);
-        }
-        
-        .form-error {
-            font-size: var(--font-size-xs);
-            color: var(--color-error);
-            margin-top: var(--space-1);
-            font-weight: var(--font-weight-semibold);
-            letter-spacing: var(--letter-spacing-wide);
-        }
-        
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--space-4);
-        }
-        
-        @media (min-width: 480px) {
-            .form-row {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        
-        @media (min-width: 768px) {
-            .form-row {
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-        }
-        
-        /* ============================================================
-           TIER SELECTOR
-           ============================================================ */
-        .tier-selector {
-            display: flex;
-            gap: var(--space-2);
-            flex-wrap: wrap;
-        }
-        
-        .tier-option {
-            flex: 1;
-            min-width: 70px;
-            padding: var(--space-2) var(--space-3);
-            background: var(--color-surface);
-            border: 1.5px solid var(--color-border);
-            border-radius: var(--radius-md);
-            cursor: pointer;
-            font-family: var(--font-primary);
-            font-size: var(--font-size-sm);
-            font-weight: var(--font-weight-semibold);
-            letter-spacing: var(--letter-spacing-wide);
-            text-align: center;
-            transition: all var(--transition-fast);
-            color: var(--color-text-secondary);
-            user-select: none;
-        }
-        
-        .tier-option:hover {
-            border-color: var(--color-border-focus);
-            background: var(--color-surface-hover);
-        }
-        
-        .tier-option.active {
-            background: #fff5f5;
-            border-color: var(--color-primary);
-            color: var(--color-primary);
-            font-weight: var(--font-weight-bold);
-            box-shadow: var(--shadow-primary);
-        }
-        
-        .tier-option.premium {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .tier-option.premium::after {
-            content: 'PREMIUM';
-            position: absolute;
-            top: 3px;
-            right: -25px;
-            background: var(--color-gold);
-            color: white;
-            font-size: 7px;
-            font-weight: 700;
-            padding: 1px 20px;
-            transform: rotate(45deg);
-            letter-spacing: 1px;
-        }
-        
-        /* ============================================================
-           BUTTONS
-           ============================================================ */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--space-2);
-            width: 100%;
-            padding: var(--space-4) var(--space-6);
-            border: none;
-            border-radius: var(--radius-md);
-            font-family: var(--font-primary);
-            font-size: var(--font-size-md);
-            font-weight: var(--font-weight-bold);
-            cursor: pointer;
-            letter-spacing: var(--letter-spacing-wider);
-            text-transform: uppercase;
-            transition: all var(--transition-base);
-            position: relative;
-            overflow: hidden;
-            user-select: none;
-            white-space: nowrap;
-        }
-        
-        .btn:active {
-            transform: scale(0.97);
-        }
-        
-        .btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            pointer-events: none;
-        }
-        
-        /* Primary Button */
-        .btn-primary {
-            background: var(--color-primary);
-            color: var(--color-text-inverse);
-            box-shadow: var(--shadow-accent);
-        }
-        
-        .btn-primary:hover {
-            background: var(--color-primary-light);
-            box-shadow: 0 6px 20px rgba(204, 0, 0, 0.3);
-            transform: translateY(-1px);
-        }
-        
-        .btn-primary:active {
-            background: var(--color-primary-dark);
-            transform: scale(0.97);
-        }
-        
-        /* Stop Button */
-        .btn-danger {
-            background: transparent;
-            color: var(--color-accent);
-            border: 2px solid var(--color-accent);
-        }
-        
-        .btn-danger:hover {
-            background: var(--color-error-bg);
-            border-color: var(--color-accent-light);
-        }
-        
-        /* Outline Button */
-        .btn-outline {
-            background: transparent;
-            color: var(--color-text-secondary);
-            border: 1.5px solid var(--color-border);
-            font-size: var(--font-size-sm);
-            letter-spacing: var(--letter-spacing-wide);
-            padding: var(--space-2) var(--space-4);
-            width: auto;
-        }
-        
-        .btn-outline:hover {
-            background: var(--color-surface-hover);
-            border-color: var(--color-border-focus);
-            color: var(--color-text);
-        }
-        
-        /* Ghost Button */
-        .btn-ghost {
-            background: transparent;
-            color: var(--color-text-tertiary);
-            padding: var(--space-2) var(--space-3);
-            width: auto;
-            font-size: var(--font-size-sm);
-            letter-spacing: var(--letter-spacing-wide);
-        }
-        
-        .btn-ghost:hover {
-            background: var(--color-surface-hover);
-            color: var(--color-text);
-        }
-        
-        /* Button Ripple Effect */
-        .btn::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-        
-        .btn:active::after {
-            width: 300px;
-            height: 300px;
-        }
-        
-        /* ============================================================
-           PROGRESS SECTION
-           ============================================================ */
-        .progress-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-3);
-            margin-bottom: var(--space-5);
-        }
-        
-        @media (min-width: 480px) {
-            .progress-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        
-        @media (min-width: 768px) {
-            .progress-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-        
-        .progress-box {
-            background: var(--color-surface);
-            border: 1px solid var(--color-border-light);
-            border-radius: var(--radius-md);
-            padding: var(--space-4);
-            text-align: center;
-            transition: all var(--transition-fast);
-        }
-        
-        .progress-box:hover {
-            border-color: var(--color-border);
-            box-shadow: var(--shadow-sm);
-        }
-        
-        .progress-value {
-            font-size: var(--font-size-2xl);
-            font-weight: var(--font-weight-black);
-            line-height: 1;
-            font-variant-numeric: tabular-nums;
-            font-family: var(--font-mono);
-        }
-        
-        .progress-value.success { color: var(--color-success); }
-        .progress-value.error { color: var(--color-error); }
-        .progress-value.primary { color: var(--color-primary); }
-        .progress-value.gold { color: var(--color-gold); }
-        .progress-value.info { color: var(--color-info); }
-        
-        .progress-label {
-            font-size: var(--font-size-xs);
-            color: var(--color-text-muted);
-            letter-spacing: var(--letter-spacing-wider);
-            margin-top: var(--space-1);
-            font-weight: var(--font-weight-semibold);
-        }
-        
-        /* Progress Bar */
-        .progress-bar-container {
-            width: 100%;
-            height: 8px;
-            background: var(--color-bg-alt);
-            border-radius: var(--radius-full);
-            overflow: hidden;
-            margin: var(--space-4) 0;
-            position: relative;
-        }
-        
-        .progress-bar-fill {
-            height: 100%;
-            background: linear-gradient(90deg, 
-                var(--color-primary-dark) 0%, 
-                var(--color-primary) 30%, 
-                var(--color-accent) 70%, 
-                var(--color-accent-light) 100%
-            );
-            border-radius: var(--radius-full);
-            width: 0%;
-            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-        }
-        
-        .progress-bar-fill::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, 
-                transparent 0%, 
-                rgba(255,255,255,0.3) 50%, 
-                transparent 100%
-            );
-            animation: shimmer 2s infinite;
-        }
-        
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(200%); }
-        }
-        
-        .progress-status {
-            text-align: center;
-            font-size: var(--font-size-sm);
-            color: var(--color-text-secondary);
-            font-weight: var(--font-weight-medium);
-            letter-spacing: var(--letter-spacing-wide);
-        }
-        
-        /* ============================================================
-           LOG CONTAINER
-           ============================================================ */
-        .log-container {
-            background: #1a1a2e;
-            border: 1px solid #2a2a3e;
-            border-radius: var(--radius-md);
-            padding: var(--space-4);
-            max-height: 400px;
-            overflow-y: auto;
-            font-family: var(--font-mono);
-            font-size: 11px;
-            line-height: 1.7;
-            color: #c0c0d0;
-        }
-        
-        .log-container::-webkit-scrollbar {
-            width: 4px;
-        }
-        
-        .log-container::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        
-        .log-container::-webkit-scrollbar-thumb {
-            background: #3a3a4e;
-            border-radius: var(--radius-full);
-        }
-        
-        .log-entry {
-            padding: 2px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.02);
-            animation: logSlide 0.2s ease;
-        }
-        
-        @keyframes logSlide {
-            from { opacity: 0; transform: translateX(-10px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        
-        .log-entry .log-time {
-            color: #666;
-            margin-right: 8px;
-        }
-        
-        .log-entry.SUCCESS { color: #00cc66; }
-        .log-entry.ERROR { color: #ff4444; }
-        .log-entry.INFO { color: #4488ff; }
-        .log-entry.WARNING { color: #ffaa00; }
-        .log-entry.DEBUG { color: #888; }
-        .log-entry.SYSTEM { color: #cc66ff; }
-        
-        /* ============================================================
-           NOTIFICATION TOAST
-           ============================================================ */
-        .toast-container {
-            position: fixed;
-            top: var(--space-5);
-            right: var(--space-5);
-            z-index: var(--z-toast);
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-2);
-            max-width: 380px;
-            pointer-events: none;
-        }
-        
-        .toast {
-            background: var(--glass-bg-strong);
-            backdrop-filter: var(--glass-blur);
-            -webkit-backdrop-filter: var(--glass-blur);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--radius-md);
-            padding: var(--space-4);
-            box-shadow: var(--shadow-xl);
-            pointer-events: auto;
-            animation: toastIn 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-            font-size: var(--font-size-sm);
-        }
-        
-        @keyframes toastIn {
-            from { opacity: 0; transform: translateX(100%) scale(0.9); }
-            to { opacity: 1; transform: translateX(0) scale(1); }
-        }
-        
-        @keyframes toastOut {
-            from { opacity: 1; transform: translateX(0); }
-            to { opacity: 0; transform: translateX(100%); }
-        }
-        
-        .toast.removing {
-            animation: toastOut 0.3s ease forwards;
-        }
-        
-        .toast-title {
-            font-weight: var(--font-weight-bold);
-            color: var(--color-text);
-            font-size: var(--font-size-sm);
-            letter-spacing: var(--letter-spacing-wide);
-        }
-        
-        .toast-message {
-            color: var(--color-text-secondary);
-            font-size: var(--font-size-xs);
-            margin-top: var(--space-1);
-        }
-        
-        .toast-success { border-left: 3px solid var(--color-success); }
-        .toast-error { border-left: 3px solid var(--color-error); }
-        .toast-info { border-left: 3px solid var(--color-info); }
-        .toast-warning { border-left: 3px solid var(--color-warning); }
-        
-        /* ============================================================
-           RESPONSIVE
-           ============================================================ */
-        @media (max-width: 480px) {
-            .flix-header .brand-name {
-                font-size: var(--font-size-3xl);
-                letter-spacing: var(--letter-spacing-wider);
-            }
-            
-            .flix-header .stats-row {
-                gap: var(--space-4);
-            }
-            
-            .flix-header .stat-value {
-                font-size: var(--font-size-lg);
-            }
-            
-            .flix-card {
-                padding: var(--space-4);
-            }
-            
-            .form-input {
-                padding: var(--space-3);
-                font-size: var(--font-size-base);
-            }
-            
-            .btn {
-                padding: var(--space-3) var(--space-4);
-                font-size: var(--font-size-sm);
-            }
-            
-            .toast-container {
-                left: var(--space-2);
-                right: var(--space-2);
-                max-width: none;
-            }
-        }
-        
-        /* ============================================================
-           UTILITY CLASSES
-           ============================================================ */
-        .hidden { display: none !important; }
-        .text-center { text-align: center; }
-        .text-mono { font-family: var(--font-mono); }
-        .text-sm { font-size: var(--font-size-sm); }
-        .text-xs { font-size: var(--font-size-xs); }
-        .font-bold { font-weight: var(--font-weight-bold); }
-        .mt-2 { margin-top: var(--space-2); }
-        .mt-4 { margin-top: var(--space-4); }
-        .mb-4 { margin-bottom: var(--space-4); }
-        .gap-2 { gap: var(--space-2); }
-        .flex { display: flex; }
-        .flex-between { display: flex; justify-content: space-between; align-items: center; }
-        
-        /* Pulse animation for live indicator */
-        .pulse {
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--color-success);
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.3; }
+            --bg: #f8f9fb;
+            --card: #ffffff;
+            --border: #e5e5ea;
+            --primary: #8b0000;
+            --accent: #cc0000;
+            --text: #1a1a2e;
+            --text2: #555;
+            --success: #008800;
+            --error: #cc0000;
+            --gold: #996600;
+            --radius: 14px;
+            --shadow: 0 2px 16px rgba(0,0,0,.05);
+        }
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:14px;line-height:1.7}
+        
+        .app{max-width:780px;margin:0 auto;padding:12px;display:flex;flex-direction:column;gap:12px}
+        
+        .header{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px 20px;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+        .header::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--primary),var(--accent),var(--primary),transparent)}
+        .header h1{font-size:3em;font-weight:900;color:var(--primary);letter-spacing:8px;line-height:1}
+        .header .sub{font-size:.7em;color:#999;letter-spacing:5px;margin-top:2px}
+        .header .v{display:inline-block;background:var(--primary);color:#fff;font-size:.65em;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:2px;margin-top:6px}
+        .header .stats{display:flex;justify-content:center;gap:24px;margin-top:16px;flex-wrap:wrap}
+        .header .stat{text-align:center;min-width:55px}
+        .header .stat-val{font-size:1.6em;font-weight:800;color:var(--primary);line-height:1;font-family:monospace}
+        .header .stat-lbl{font-size:.6em;color:#aaa;letter-spacing:2px;margin-top:2px}
+        
+        .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+        .card-title{font-weight:700;font-size:.8em;letter-spacing:3px;border-bottom:1px solid var(--border);padding-bottom:10px;margin-bottom:16px;color:var(--text)}
+        
+        label{display:block;font-size:.68em;font-weight:700;color:var(--text2);letter-spacing:1px;margin-bottom:3px}
+        input{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:'Cairo',sans-serif;font-size:.88em;margin-bottom:12px;transition:all .2s;background:#fafbfc}
+        input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(139,0,0,.06);background:#fff}
+        input.ltr{direction:ltr;text-align:left;font-family:monospace;font-size:.82em}
+        
+        .row{display:grid;grid-template-columns:1fr;gap:10px}
+        @media(min-width:400px){.row{grid-template-columns:1fr 1fr}}
+        @media(min-width:600px){.row{grid-template-columns:1fr 1fr 1fr}}
+        
+        .tiers{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px}
+        .tier{padding:8px 12px;background:#fafbfc;border:1.5px solid var(--border);border-radius:6px;cursor:pointer;font-size:.72em;font-weight:600;letter-spacing:1px;transition:all .2s;text-align:center;flex:1;min-width:45px;user-select:none}
+        .tier:hover{border-color:#bbb;background:#fff}
+        .tier.active{background:#fff5f5;border-color:var(--primary);color:var(--primary);font-weight:700}
+        
+        .btn{width:100%;padding:15px;border:none;border-radius:8px;font-family:'Cairo',sans-serif;font-weight:700;font-size:.9em;cursor:pointer;letter-spacing:2px;transition:all .25s;position:relative;overflow:hidden}
+        .btn:active{transform:scale(.96)}
+        .btn-start{background:var(--primary);color:#fff;box-shadow:0 4px 16px rgba(139,0,0,.2)}
+        .btn-start:hover{background:#a00000;transform:translateY(-1px);box-shadow:0 6px 24px rgba(139,0,0,.3)}
+        .btn-stop{background:#fff;color:var(--accent);border:2px solid var(--accent);display:none}
+        .btn-stop:hover{background:#fff5f5}
+        
+        .prog-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+        @media(min-width:400px){.prog-grid{grid-template-columns:1fr 1fr 1fr 1fr}}
+        .prog-box{background:#fafbfc;border-radius:8px;padding:14px;text-align:center;border:1px solid #f0f0f3}
+        .prog-val{font-size:1.8em;font-weight:900;line-height:1;font-family:monospace}
+        .prog-val.s{color:var(--success)}.prog-val.e{color:var(--error)}.prog-val.p{color:var(--primary)}.prog-val.g{color:var(--gold)}
+        .prog-lbl{font-size:.6em;color:#999;letter-spacing:1px;margin-top:2px}
+        
+        .bar{height:8px;background:#eee;border-radius:4px;overflow:hidden;margin:14px 0}
+        .bar-fill{height:100%;background:linear-gradient(90deg,#660000,#cc0000,#ff3333);border-radius:4px;width:0;transition:width .4s;position:relative}
+        .bar-fill::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);animation:shimmer 2s infinite}
+        @keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(200%)}}
+        
+        .status{text-align:center;font-size:.78em;color:#666;letter-spacing:1px}
+        
+        .log-box{background:#1a1a2e;border-radius:8px;padding:10px;max-height:350px;overflow-y:auto;font-family:'SF Mono','Consolas',monospace;font-size:10px;line-height:1.7;color:#c0c0d0}
+        .log-box::-webkit-scrollbar{width:3px}
+        .log-box::-webkit-scrollbar-thumb{background:#444;border-radius:3px}
+        .log-line{padding:2px 0;border-bottom:1px solid rgba(255,255,255,.02);animation:slideIn .2s ease}
+        @keyframes slideIn{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:translateX(0)}}
+        .log-success{color:#0c0}.log-error{color:#f44}.log-info{color:#4af}.log-warning{color:#fa0}.log-system{color:#c6f}
+        
+        .toasts{position:fixed;top:12px;left:12px;right:12px;z-index:9999;display:flex;flex-direction:column;gap:6px;pointer-events:none}
+        .toast{background:#fff;border-radius:10px;padding:12px 16px;box-shadow:0 8px 32px rgba(0,0,0,.15);font-size:.8em;pointer-events:auto;animation:toastIn .35s ease;border-right:3px solid var(--primary)}
+        @keyframes toastIn{from{opacity:0;transform:translateX(60px)}to{opacity:1;transform:translateX(0)}}
+        @keyframes toastOut{from{opacity:1;transform:translateX(0)}to{opacity:0;transform:translateX(60px)}}
+        
+        .pulse{display:inline-block;width:7px;height:7px;background:var(--success);border-radius:50%;animation:pulse 1.5s infinite;margin-left:5px;vertical-align:middle}
+        @keyframes pulse{0%,100%{opacity:1}50%{opacity:.2}}
+        
+        .hidden{display:none!important}
+        
+        @media(max-width:360px){
+            .header h1{font-size:2em;letter-spacing:4px}
+            .header .stats{gap:12px}
+            .header .stat-val{font-size:1.2em}
+            .card{padding:14px}
+            input{padding:10px}
         }
     </style>
 </head>
 <body>
-    <!-- Toast Container -->
-    <div class="toast-container" id="toastContainer"></div>
+    <div class="toasts" id="toasts"></div>
     
-    <!-- Main App -->
-    <div class="flix-app">
-        <!-- ============================================================
-             HEADER
-             ============================================================ -->
-        <header class="flix-header">
-            <div class="brand-name">FLIX</div>
-            <div class="brand-subtitle">ULTIMATE REFERRAL ENGINE</div>
-            <span class="brand-version">v8.0</span>
-            
-            <div class="stats-row" id="headerStats">
-                <div class="stat-item">
-                    <div class="stat-value" id="statTotal">---</div>
-                    <div class="stat-label">TOTAL ACCOUNTS</div>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <div class="stat-value" id="statActive">---</div>
-                    <div class="stat-label">ACTIVE</div>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <div class="stat-value gold" id="statPremium">---</div>
-                    <div class="stat-label">PREMIUM</div>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <div class="stat-value" id="statReferrals">---</div>
-                    <div class="stat-label">REFERRALS</div>
-                </div>
+    <div class="app">
+        <!-- الهيدر -->
+        <div class="header">
+            <h1>FLIX</h1>
+            <div class="sub">محرك الإحالات المتطور</div>
+            <span class="v">v10.0</span>
+            <div class="stats">
+                <div class="stat"><div class="stat-val" id="sTotal">--</div><div class="stat-lbl">حساب</div></div>
+                <div class="stat"><div class="stat-val" id="sActive">--</div><div class="stat-lbl">نشط</div></div>
+                <div class="stat"><div class="stat-val" id="sPremium">--</div><div class="stat-lbl">ممتاز</div></div>
+                <div class="stat"><div class="stat-val" id="sSpeed">--</div><div class="stat-lbl">إحالة/ث</div></div>
             </div>
-        </header>
-        
-        <!-- ============================================================
-             CONFIGURATION CARD
-             ============================================================ -->
-        <div class="flix-card" id="configCard">
-            <div class="flix-card-header">
-                <span class="flix-card-title">REFERRAL CONFIGURATION</span>
-                <span class="flix-card-badge idle" id="statusBadge">IDLE</span>
-            </div>
-            
-            <!-- Referral Link -->
-            <div class="form-group">
-                <label class="form-label">
-                    <span class="label-icon">L</span>
-                    REFERRAL LINK
-                </label>
-                <input 
-                    type="url" 
-                    class="form-input ltr" 
-                    id="referralLink" 
-                    placeholder="https://t.me/BotName?start=YOUR_CODE"
-                    autocomplete="off"
-                    spellcheck="false"
-                >
-                <div class="form-hint">ENTER THE FULL TELEGRAM BOT REFERRAL LINK</div>
-                <div class="form-error hidden" id="linkError"></div>
-            </div>
-            
-            <!-- Count & Delay -->
-            <div class="form-row">
-                <div class="form-group">
-                    <label class="form-label">
-                        <span class="label-icon">#</span>
-                        REFERRAL COUNT
-                    </label>
-                    <input 
-                        type="number" 
-                        class="form-input" 
-                        id="referralCount" 
-                        value="500" 
-                        min="1" 
-                        max="100000"
-                        step="1"
-                    >
-                    <div class="form-hint">1 - 100,000</div>
-                </div>
-                
-                <div class="form-group">
-                    <label class="form-label">
-                        <span class="label-icon">T</span>
-                        DELAY (SECONDS)
-                    </label>
-                    <input 
-                        type="number" 
-                        class="form-input" 
-                        id="delayTime" 
-                        value="2.0" 
-                        min="0.5" 
-                        max="300"
-                        step="0.5"
-                    >
-                    <div class="form-hint">0.5 - 300 SECONDS</div>
-                </div>
-                
-                <div class="form-group">
-                    <label class="form-label">
-                        <span class="label-icon">@</span>
-                        NOTIFY USER ID
-                    </label>
-                    <input 
-                        type="text" 
-                        class="form-input" 
-                        id="notifyTarget" 
-                        placeholder="OPTIONAL"
-                        autocomplete="off"
-                    >
-                    <div class="form-hint">TELEGRAM USER ID</div>
-                </div>
-            </div>
-            
-            <!-- Tier Selector -->
-            <div class="form-group">
-                <label class="form-label">
-                    <span class="label-icon">*</span>
-                    ACCOUNT TIER
-                </label>
-                <div class="tier-selector" id="tierSelector">
-                    <div class="tier-option active" data-tier="">ALL</div>
-                    <div class="tier-option premium" data-tier="PREMIUM">PREMIUM</div>
-                    <div class="tier-option" data-tier="HIGH">HIGH</div>
-                    <div class="tier-option" data-tier="STANDARD">STANDARD</div>
-                    <div class="tier-option" data-tier="BASIC">BASIC</div>
-                </div>
-            </div>
-            
-            <!-- Action Buttons -->
-            <button class="btn btn-primary" id="startBtn" onclick="startEngine()">
-                START REFERRAL ENGINE
-            </button>
-            <button class="btn btn-danger hidden" id="stopBtn" onclick="stopEngine()">
-                STOP ENGINE IMMEDIATELY
-            </button>
         </div>
         
-        <!-- ============================================================
-             PROGRESS CARD
-             ============================================================ -->
-        <div class="flix-card hidden" id="progressCard">
-            <div class="flix-card-header">
-                <span class="flix-card-title">LIVE PROGRESS</span>
-                <span class="flix-card-badge running" id="progressBadge">
-                    <span class="pulse"></span> RUNNING
-                </span>
+        <!-- الإعدادات -->
+        <div class="card" id="configCard">
+            <div class="card-title">إعدادات الإحالة</div>
+            
+            <label>رابط الإحالة</label>
+            <input type="text" class="ltr" id="link" placeholder="https://t.me/BotName?start=CODE" autocomplete="off">
+            
+            <div class="row">
+                <div><label>عدد الإحالات</label><input type="number" id="count" value="100" min="1" max="100000" step="1"></div>
+                <div><label>التأخير (ثانية)</label><input type="number" id="delay" value="0.05" min="0.01" max="60" step="0.01"></div>
+                <div><label>معرف الإشعارات</label><input type="text" id="notify" placeholder="اختياري"></div>
             </div>
             
-            <div class="progress-grid">
-                <div class="progress-box">
-                    <div class="progress-value success" id="successCount">0</div>
-                    <div class="progress-label">SUCCESS</div>
-                </div>
-                <div class="progress-box">
-                    <div class="progress-value error" id="failCount">0</div>
-                    <div class="progress-label">FAILED</div>
-                </div>
-                <div class="progress-box">
-                    <div class="progress-value primary" id="remainCount">0</div>
-                    <div class="progress-label">REMAINING</div>
-                </div>
-                <div class="progress-box">
-                    <div class="progress-value gold" id="bypassCount">0</div>
-                    <div class="progress-label">CH. BYPASSED</div>
-                </div>
+            <label>مستوى الحساب</label>
+            <div class="tiers" id="tiers">
+                <div class="tier active" data-tier="">الكل</div>
+                <div class="tier" data-tier="PREMIUM">ممتاز</div>
+                <div class="tier" data-tier="HIGH">عالي</div>
+                <div class="tier" data-tier="STANDARD">قياسي</div>
             </div>
             
-            <div class="progress-bar-container">
-                <div class="progress-bar-fill" id="progressBar"></div>
-            </div>
-            
-            <div class="progress-status" id="statusText">INITIALIZING ENGINE...</div>
+            <button class="btn btn-start" id="sBtn" onclick="startEngine()">بدء الإحالات</button>
+            <button class="btn btn-stop" id="xBtn" onclick="stopEngine()">إيقاف فوري</button>
         </div>
         
-        <!-- ============================================================
-             LOG CARD
-             ============================================================ -->
-        <div class="flix-card hidden" id="logCard">
-            <div class="flix-card-header">
-                <span class="flix-card-title">SYSTEM LOG</span>
-                <div class="flex gap-2">
-                    <button class="btn btn-ghost" onclick="clearLogs()">CLEAR</button>
-                    <button class="btn btn-ghost" onclick="exportLogs()">EXPORT</button>
-                </div>
+        <!-- التقدم -->
+        <div class="card hidden" id="progCard">
+            <div class="card-title">التقدم <span class="pulse"></span></div>
+            
+            <div class="prog-grid">
+                <div class="prog-box"><div class="prog-val s" id="pSuccess">0</div><div class="prog-lbl">نجح</div></div>
+                <div class="prog-box"><div class="prog-val e" id="pFail">0</div><div class="prog-lbl">فشل</div></div>
+                <div class="prog-box"><div class="prog-val p" id="pRemain">0</div><div class="prog-lbl">متبقي</div></div>
+                <div class="prog-box"><div class="prog-val g" id="pChannels">0</div><div class="prog-lbl">قنوات</div></div>
             </div>
-            <div class="log-container" id="logContainer"></div>
+            
+            <div class="bar"><div class="bar-fill" id="pBar"></div></div>
+            <div class="status" id="pStatus">في انتظار البدء...</div>
+        </div>
+        
+        <!-- السجل -->
+        <div class="card hidden" id="logCard">
+            <div class="card-title" style="display:flex;justify-content:space-between;align-items:center">
+                <span>سجل العمليات</span>
+                <button onclick="clearLog()" style="background:none;border:1px solid #ddd;padding:5px 14px;border-radius:6px;cursor:pointer;font-family:'Cairo';font-size:.7em;letter-spacing:1px">مسح</button>
+            </div>
+            <div class="log-box" id="logBox"></div>
         </div>
     </div>
     
-    <!-- Socket.IO Client -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.min.js"></script>
-    
     <script>
-        /**
-         * FLIX WEB v8.0 - FRONTEND ENGINE
-         * Pure Digital - Maximum Performance - Real-time Updates
-         */
+        const socket = io(window.location.origin, {
+            transports: ['websocket', 'polling'],
+            reconnection: true,
+            reconnectionDelay: 500,
+            reconnectionDelayMax: 5000,
+            reconnectionAttempts: Infinity
+        });
         
-        // ============================================================
-        // GLOBAL STATE
-        // ============================================================
-        const STATE = {
-            isRunning: false,
-            currentJobId: null,
-            socket: null,
-            statsInterval: null,
-            totalAccounts: 0,
-            activeAccounts: 0,
-            premiumAccounts: 0,
-            totalReferrals: 0
-        };
+        let running = false;
+        let jobId = null;
         
-        // ============================================================
-        // INITIALIZATION
-        // ============================================================
-        function initializeApp() {
-            connectSocket();
-            loadSystemStatus();
-            STATE.statsInterval = setInterval(loadSystemStatus, 30000);
-            setupTierSelector();
-            setupInputValidation();
-            logMessage('SYSTEM', 'FLIX WEB v8.0 INITIALIZED');
-            logMessage('INFO', 'All systems ready - awaiting command');
-        }
-        
-        function connectSocket() {
-            STATE.socket = io(window.location.origin, {
-                transports: ['websocket', 'polling'],
-                reconnection: true,
-                reconnectionAttempts: Infinity,
-                reconnectionDelay: 1000,
-                reconnectionDelayMax: 10000
-            });
-            
-            STATE.socket.on('connect', () => {
-                logMessage('SUCCESS', 'Connected to FLIX engine');
-                updateConnectionStatus(true);
-            });
-            
-            STATE.socket.on('disconnect', () => {
-                logMessage('ERROR', 'Disconnected from engine');
-                updateConnectionStatus(false);
-            });
-            
-            STATE.socket.on('notification', handleNotification);
-            STATE.socket.on('progress_update', handleProgressUpdate);
-            STATE.socket.on('job_started', handleJobStarted);
-            STATE.socket.on('job_completed', handleJobCompleted);
-            STATE.socket.on('engine_log', (data) => {
-                logMessage(data.level || 'INFO', data.message);
-            });
-        }
-        
-        // ============================================================
-        // SYSTEM STATUS
-        // ============================================================
-        async function loadSystemStatus() {
+        // تحميل حالة النظام
+        async function loadStatus() {
             try {
-                const response = await fetch('/api/v1/status');
-                const data = await response.json();
+                const r = await fetch('/api/status');
+                const d = await r.json();
                 
-                if (data.stats) {
-                    STATE.totalAccounts = data.stats.total_accounts || 0;
-                    STATE.activeAccounts = data.stats.active_accounts || 0;
-                    STATE.premiumAccounts = data.stats.premium_accounts || 0;
-                    STATE.totalReferrals = data.stats.total_referrals || 0;
-                    
-                    updateHeaderStats();
+                const format = n => n >= 1000000 ? (n/1000000).toFixed(1)+'M' : n >= 1000 ? (n/1000).toFixed(1)+'K' : n;
+                
+                document.getElementById('sTotal').textContent = format(d.accounts.total);
+                document.getElementById('sActive').textContent = format(d.accounts.active);
+                document.getElementById('sPremium').textContent = format(d.accounts.premium);
+                document.getElementById('sSpeed').textContent = d.processed || '0';
+                
+                if (!d.telethon) {
+                    log('تحذير: وضع المحاكاة - للحصول على إحالات حقيقية قم بتثبيت Telethon', 'warning');
                 }
-            } catch (error) {
-                console.error('Status fetch failed:', error);
+            } catch(e) {
+                console.error('فشل تحميل الحالة:', e);
             }
         }
         
-        function updateHeaderStats() {
-            const formatNumber = (num) => {
-                if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
-                if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
-                return num.toLocaleString();
-            };
-            
-            document.getElementById('statTotal').textContent = formatNumber(STATE.totalAccounts);
-            document.getElementById('statActive').textContent = formatNumber(STATE.activeAccounts);
-            document.getElementById('statPremium').textContent = formatNumber(STATE.premiumAccounts);
-            document.getElementById('statReferrals').textContent = formatNumber(STATE.totalReferrals);
-        }
+        // أحداث WebSocket
+        socket.on('connect', () => log('تم الاتصال بالمحرك', 'success'));
         
-        // ============================================================
-        // ENGINE CONTROL
-        // ============================================================
+        socket.on('disconnect', () => {
+            log('انقطع الاتصال - جاري إعادة المحاولة...', 'warning');
+        });
+        
+        socket.on('reconnect', () => log('تمت إعادة الاتصال', 'success'));
+        
+        socket.on('log', d => log(d.msg, d.type));
+        
+        socket.on('progress_update', d => {
+            document.getElementById('pSuccess').textContent = d.success || 0;
+            document.getElementById('pFail').textContent = d.fail || 0;
+            document.getElementById('pRemain').textContent = (d.total - d.current) || 0;
+            document.getElementById('pChannels').textContent = d.channels || 0;
+            document.getElementById('pBar').style.width = (d.percentage || 0) + '%';
+            document.getElementById('pStatus').textContent = 
+                `${d.current}/${d.total} (${d.percentage}%) | ${d.speed} إحالة/ث | ${d.elapsed} ثانية`;
+            document.getElementById('sSpeed').textContent = d.speed || 0;
+        });
+        
+        socket.on('job_completed', d => {
+            running = false;
+            document.getElementById('sBtn').classList.remove('hidden');
+            document.getElementById('xBtn').classList.add('hidden');
+            document.getElementById('pStatus').textContent = 
+                `اكتمل | ${d.success}/${d.total} | ${d.rate}% | ${d.duration} ثانية`;
+            log(`========================================`, 'system');
+            log(`اكتملت المهمة: ${d.job_id}`, 'success');
+            log(`نجح: ${d.success} | فشل: ${d.fail} | قنوات: ${d.channels}`, 'info');
+            log(`النسبة: ${d.rate}% | المدة: ${d.duration} ثانية | السرعة: ${d.speed}/ث`, 'info');
+            log(`========================================`, 'system');
+            toast(`اكتملت المهمة | ${d.success} إحالة ناجحة | ${d.rate}%`);
+            loadStatus();
+        });
+        
+        // بدء الإحالات
         async function startEngine() {
-            if (STATE.isRunning) return;
+            if (running) return;
             
-            const link = document.getElementById('referralLink').value.trim();
-            const count = parseInt(document.getElementById('referralCount').value);
-            const delay = parseFloat(document.getElementById('delayTime').value);
-            const tier = document.querySelector('.tier-option.active')?.dataset?.tier || null;
-            const notify = document.getElementById('notifyTarget').value.trim() || null;
+            const link = document.getElementById('link').value.trim();
+            const count = parseInt(document.getElementById('count').value);
+            const delay = parseFloat(document.getElementById('delay').value);
+            const tier = document.querySelector('.tier.active')?.dataset?.tier || '';
             
-            // Validate link
             if (!link || !link.includes('t.me/')) {
-                showLinkError('INVALID REFERRAL LINK - MUST CONTAIN t.me/');
+                alert('الرجاء إدخال رابط إحالة صحيح يحتوي على t.me/');
                 return;
             }
             
-            clearLinkError();
-            
-            // Validate count
-            if (isNaN(count) || count < 1 || count > 100000) {
-                showToast('ERROR', 'INVALID COUNT', 'Count must be between 1 and 100,000');
-                return;
-            }
-            
-            // Validate delay
-            if (isNaN(delay) || delay < 0.5 || delay > 300) {
-                showToast('ERROR', 'INVALID DELAY', 'Delay must be between 0.5 and 300 seconds');
+            if (isNaN(count) || count < 1) {
+                alert('الرجاء إدخال عدد صحيح');
                 return;
             }
             
             try {
-                const response = await fetch('/api/v1/referral/start', {
+                const r = await fetch('/api/start', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        link: link,
-                        count: count,
-                        delay: delay,
-                        tier: tier || undefined,
-                        premium_only: tier === 'PREMIUM',
-                        notify_target: notify
-                    })
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({link, count, delay, tier})
                 });
                 
-                const data = await response.json();
+                const d = await r.json();
                 
-                if (data.error) {
-                    showToast('ERROR', 'START FAILED', data.error);
+                if (d.error) {
+                    alert('خطأ: ' + d.error);
                     return;
                 }
                 
-                // Update UI
-                STATE.isRunning = true;
-                STATE.currentJobId = data.job_id;
+                running = true;
+                jobId = d.job_id;
                 
-                document.getElementById('startBtn').classList.add('hidden');
-                document.getElementById('stopBtn').classList.remove('hidden');
-                document.getElementById('progressCard').classList.remove('hidden');
+                document.getElementById('sBtn').classList.add('hidden');
+                document.getElementById('xBtn').classList.remove('hidden');
+                document.getElementById('progCard').classList.remove('hidden');
                 document.getElementById('logCard').classList.remove('hidden');
+                document.getElementById('logBox').innerHTML = '';
                 
-                updateStatusBadge('running', 'RUNNING');
+                log(`بدء المهمة: ${d.job_id}`, 'success');
+                log(`عدد الإحالات: ${d.accounts} | البوت: @${d.bot}`, 'info');
+                log(`الوقت المقدر: ${d.estimated_seconds} ثانية`, 'info');
+                log(`Telethon: ${d.telethon ? 'حقيقي' : 'محاكاة'}`, d.telethon ? 'success' : 'warning');
                 
-                // Clear previous logs
-                document.getElementById('logContainer').innerHTML = '';
+                toast(`تم البدء | ${d.accounts} إحالة إلى @${d.bot}`);
                 
-                logMessage('SUCCESS', `JOB STARTED: ${data.job_id}`);
-                logMessage('INFO', `Accounts: ${data.accounts_used} | Estimated: ${data.estimated_minutes} minutes`);
-                logMessage('INFO', `Target Bot: ${data.target_bot}`);
-                
-                if (STATE.socket && STATE.socket.connected) {
-                    STATE.socket.emit('subscribe_job', { job_id: data.job_id });
-                }
-                
-                showToast('SUCCESS', 'ENGINE STARTED', `${data.accounts_used} accounts processing`);
-                
-            } catch (error) {
-                logMessage('ERROR', `Failed to start: ${error.message}`);
-                showToast('ERROR', 'CONNECTION ERROR', error.message);
+            } catch(e) {
+                log('خطأ في الاتصال: ' + e.message, 'error');
             }
         }
         
+        // إيقاف الإحالات
         function stopEngine() {
-            STATE.isRunning = false;
-            
-            document.getElementById('startBtn').classList.remove('hidden');
-            document.getElementById('stopBtn').classList.add('hidden');
-            updateStatusBadge('idle', 'STOPPED');
-            
-            if (STATE.socket && STATE.currentJobId) {
-                STATE.socket.emit('unsubscribe_job', { job_id: STATE.currentJobId });
-            }
-            
-            logMessage('WARNING', 'ENGINE STOPPED BY USER');
-            showToast('WARNING', 'ENGINE STOPPED', 'Operation cancelled by user');
+            running = false;
+            document.getElementById('sBtn').classList.remove('hidden');
+            document.getElementById('xBtn').classList.add('hidden');
+            document.getElementById('pStatus').textContent = 'تم الإيقاف يدوياً';
+            log('تم إيقاف المحرك', 'warning');
+            toast('تم إيقاف المحرك');
         }
         
-        // ============================================================
-        // EVENT HANDLERS
-        // ============================================================
-        function handleProgressUpdate(data) {
-            document.getElementById('successCount').textContent = data.successful || 0;
-            document.getElementById('failCount').textContent = data.failed || 0;
-            document.getElementById('remainCount').textContent = (data.total - data.current) || 0;
-            document.getElementById('bypassCount').textContent = data.channels_bypassed || 0;
-            document.getElementById('progressBar').style.width = (data.percentage || 0) + '%';
-            document.getElementById('statusText').textContent = 
-                `PROCESSING: ${data.current}/${data.total} (${data.percentage}%)`;
-        }
-        
-        function handleJobStarted(data) {
-            logMessage('INFO', `Job ${data.job_id}: Processing ${data.total} referrals`);
-        }
-        
-        function handleJobCompleted(data) {
-            STATE.isRunning = false;
+        // إضافة سجل
+        function log(msg, type) {
+            const box = document.getElementById('logBox');
+            if (!box) return;
             
-            document.getElementById('startBtn').classList.remove('hidden');
-            document.getElementById('stopBtn').classList.add('hidden');
-            updateStatusBadge('idle', 'COMPLETED');
+            const line = document.createElement('div');
+            line.className = 'log-line log-' + (type || 'info');
+            const time = new Date().toLocaleTimeString('ar-EG', {hour12: false});
+            line.textContent = `[${time}] ${msg}`;
+            box.appendChild(line);
+            box.scrollTop = box.scrollHeight;
             
-            logMessage('SUCCESS', `========================================`);
-            logMessage('SUCCESS', `JOB COMPLETED: ${data.job_id}`);
-            logMessage('SUCCESS', `Success: ${data.successful} | Failed: ${data.failed}`);
-            logMessage('SUCCESS', `Rate: ${data.success_rate}% | Duration: ${data.duration}s`);
-            logMessage('SUCCESS', `Channels Bypassed: ${data.channels_bypassed}`);
-            logMessage('SUCCESS', `========================================`);
-            
-            showToast('SUCCESS', 'JOB COMPLETED', 
-                `Success: ${data.successful} | Rate: ${data.success_rate}%`);
-            
-            loadSystemStatus();
-        }
-        
-        function handleNotification(data) {
-            if (data && data.message) {
-                const type = data.type || 'SYSTEM';
-                logMessage(type, data.message);
+            // حد أقصى 500 سطر
+            while (box.children.length > 500) {
+                box.removeChild(box.firstChild);
             }
         }
         
-        // ============================================================
-        // UI HELPERS
-        // ============================================================
-        function updateConnectionStatus(connected) {
-            const badge = document.getElementById('statusBadge');
-            if (connected) {
-                badge.textContent = 'CONNECTED';
-                badge.className = 'flix-card-badge active';
-            } else {
-                badge.textContent = 'DISCONNECTED';
-                badge.className = 'flix-card-badge idle';
-            }
+        function clearLog() {
+            const box = document.getElementById('logBox');
+            if (box) box.innerHTML = '';
+            log('تم مسح السجل', 'system');
         }
         
-        function updateStatusBadge(status, text) {
-            const badge = document.getElementById('statusBadge');
-            const progressBadge = document.getElementById('progressBadge');
-            
-            badge.textContent = text;
-            badge.className = `flix-card-badge ${status}`;
-            
-            if (progressBadge) {
-                progressBadge.innerHTML = status === 'running' 
-                    ? '<span class="pulse"></span> RUNNING' 
-                    : text;
-            }
-        }
-        
-        function showLinkError(message) {
-            const errorEl = document.getElementById('linkError');
-            errorEl.textContent = message;
-            errorEl.classList.remove('hidden');
-            document.getElementById('referralLink').style.borderColor = 'var(--color-error)';
-        }
-        
-        function clearLinkError() {
-            const errorEl = document.getElementById('linkError');
-            errorEl.classList.add('hidden');
-            document.getElementById('referralLink').style.borderColor = 'var(--color-border)';
-        }
-        
-        function showToast(type, title, message) {
-            const container = document.getElementById('toastContainer');
-            const toast = document.createElement('div');
-            toast.className = `toast toast-${type.toLowerCase()}`;
-            toast.innerHTML = `
-                <div class="toast-title">${title}</div>
-                <div class="toast-message">${message}</div>
-            `;
-            
-            container.appendChild(toast);
+        function toast(msg) {
+            const container = document.getElementById('toasts');
+            const t = document.createElement('div');
+            t.className = 'toast';
+            t.textContent = msg;
+            container.appendChild(t);
             
             setTimeout(() => {
-                toast.classList.add('removing');
-                setTimeout(() => toast.remove(), 300);
-            }, 4000);
+                t.style.animation = 'toastOut .3s ease forwards';
+                setTimeout(() => t.remove(), 300);
+            }, 3500);
+            
+            // حد أقصى 5 إشعارات
+            while (container.children.length > 5) {
+                container.removeChild(container.firstChild);
+            }
         }
         
-        function logMessage(level, message) {
-            const container = document.getElementById('logContainer');
-            if (!container) return;
-            
-            const entry = document.createElement('div');
-            entry.className = `log-entry ${level}`;
-            
-            const time = new Date().toLocaleTimeString('en-GB', { hour12: false });
-            entry.innerHTML = `<span class="log-time">[${time}]</span> ${message}`;
-            
-            container.appendChild(entry);
-            container.scrollTop = container.scrollHeight;
-        }
+        // اختيار المستوى
+        document.getElementById('tiers').addEventListener('click', e => {
+            if (e.target.classList.contains('tier')) {
+                document.querySelectorAll('.tier').forEach(t => t.classList.remove('active'));
+                e.target.classList.add('active');
+            }
+        });
         
-        function clearLogs() {
-            document.getElementById('logContainer').innerHTML = '';
-            logMessage('SYSTEM', 'LOG CLEARED');
-        }
-        
-        function exportLogs() {
-            const container = document.getElementById('logContainer');
-            if (!container) return;
-            
-            const logs = Array.from(container.children)
-                .map(entry => entry.textContent)
-                .join('\n');
-            
-            const blob = new Blob([logs], { type: 'text/plain' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `flix-logs-${Date.now()}.txt`;
-            a.click();
-            URL.revokeObjectURL(url);
-            
-            logMessage('INFO', 'Logs exported');
-        }
-        
-        // ============================================================
-        // SETUP FUNCTIONS
-        // ============================================================
-        function setupTierSelector() {
-            document.getElementById('tierSelector').addEventListener('click', (e) => {
-                if (e.target.classList.contains('tier-option')) {
-                    document.querySelectorAll('.tier-option').forEach(opt => 
-                        opt.classList.remove('active')
-                    );
-                    e.target.classList.add('active');
-                }
-            });
-        }
-        
-        function setupInputValidation() {
-            const linkInput = document.getElementById('referralLink');
-            linkInput.addEventListener('input', () => {
-                if (linkInput.value.trim() && !linkInput.value.includes('t.me/')) {
-                    showLinkError('LINK MUST CONTAIN t.me/');
-                } else {
-                    clearLinkError();
-                }
-            });
-            
-            // Validate on blur
-            linkInput.addEventListener('blur', async () => {
-                const link = linkInput.value.trim();
-                if (link && link.includes('t.me/')) {
-                    try {
-                        const response = await fetch('/api/v1/referral/validate', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ link })
-                        });
-                        const data = await response.json();
-                        
-                        if (data.valid) {
-                            clearLinkError();
-                            if (data.bot_username) {
-                                logMessage('DEBUG', `Bot detected: @${data.bot_username}`);
-                            }
-                        } else {
-                            showLinkError('INVALID REFERRAL LINK FORMAT');
-                        }
-                    } catch (error) {
-                        // Silently fail - validation is optional
-                    }
-                }
-            });
-        }
-        
-        // ============================================================
-        // KEYBOARD SHORTCUTS
-        // ============================================================
-        document.addEventListener('keydown', (e) => {
+        // اختصارات لوحة المفاتيح
+        document.addEventListener('keydown', e => {
             if (e.ctrlKey && e.key === 'Enter') {
                 e.preventDefault();
-                if (STATE.isRunning) {
-                    stopEngine();
-                } else {
-                    startEngine();
-                }
+                running ? stopEngine() : startEngine();
             }
-            
             if (e.ctrlKey && e.key === 'l') {
                 e.preventDefault();
-                document.getElementById('referralLink').focus();
+                document.getElementById('link').focus();
             }
         });
         
-        // ============================================================
-        // STARTUP
-        // ============================================================
-        document.addEventListener('DOMContentLoaded', initializeApp);
-        
-        // Handle page unload
-        window.addEventListener('beforeunload', () => {
-            if (STATE.isRunning) {
-                return 'Engine is still running. Are you sure you want to leave?';
-            }
-        });
-        
-        console.log('%c FLIX WEB v8.0 %c READY ',
-            'background:#8b0000;color:white;padding:4px 8px;font-weight:bold;',
-            'background:#1a1a2e;color:#c0c0d0;padding:4px 8px;');
+        // بدء التشغيل
+        loadStatus();
+        setInterval(loadStatus, 15000);
+        log('FLIX WEB v10.0 جاهز للعمل', 'system');
+        log('السيرفر مستقر | الإحالات جاهزة', 'info');
     </script>
-</body>
-</html>
+</bo
